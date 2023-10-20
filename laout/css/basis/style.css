@@ -1,0 +1,146 @@
+html {
+
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+body {
+  padding: clamp(2em, 10vw ,4em);
+  font-family: 'OpenSans';
+  font-weight: 400;
+  color: hsl(var(--c-text));
+  background-color: #88f89b;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+span {
+    font-family: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.invisible {
+    opacity: 0;
+}
+
+.stop-scrolling {
+    height: 100%;
+    overflow: hidden;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.section {
+    padding: 3em 0;
+}
+
+.list--reset {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    row-gap: .5em;
+}
+
+.wraper {
+    max-width: 100em;
+    width: 90%;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 1em;
+    -webkit-border-radius: 1em;
+    -moz-border-radius: 1em;
+    -ms-border-radius: 1em;
+    -o-border-radius: 1em;
+}
+
+/* -------header------- */
+
+
+  .header {
+    padding: 1em 0;
+    border-bottom: 1px solid #adadad;
+  }
+
+
+  .header__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .basket-icon {
+    width: 1.2em;
+    height: 1.2em;
+  }
+/* -------header------- */
+/* ---------logo--------- */
+  .logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: start;
+  }
+
+  .logo__img {
+    width: 3em;
+  }
+
+  .logo__description > * {
+    margin: 0;
+    padding: 0;
+  }  
+/* ---------logo--------- */
+/* -------linke------- */
+.link {
+
+}
+
+.link--btn {
+    padding: .5em 1.4em;
+    border: 1px solid #e02444;
+    background-color: #e02444;
+    color: #fff;
+}
+
+.link--btn-basket {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 1em;
+    border-radius: 2em;
+    -webkit-border-radius: 2em;
+    -moz-border-radius: 2em;
+    -ms-border-radius: 2em;
+    -o-border-radius: 2em;
+}
+
+.link-btn--basket__delimiter {
+    width: 1px;
+    height: 1.2em;
+    background-color: #fff;
+
+}
+/* -------linke------- */
