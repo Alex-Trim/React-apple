@@ -1,6 +1,10 @@
 import React from 'react'; 
 
-function AppelCard({titel, prise, img}) {
+function AppelCard({titel, prise, img, sizes, types}) {
+    const [activeIndex, setActiveIndex] = React.useState(0);
+    const [activeIndexType, setactiveIndexType] = React.useState(0);
+    const typeNames = ['тонкое' , 'традиционное'];
+
     const[appelCount, setAppelCount] = React.useState(1);
     const[appelPrise, setAppelPrise] = React.useState(prise);
 
@@ -8,20 +12,26 @@ function AppelCard({titel, prise, img}) {
         setAppelCount(appelCount + 1);
         setAppelPrise(prise * (appelCount+1));
     }
-
+    const onClickCategories = (index) => {
+      setActiveIndex(index);
+     }
+     const onClickCategoriesTupe = (index) => {
+      setactiveIndexType(index);
+     }
     return(
         <div className="card">
         <img className="card__img" src={img} alt=""></img>
         <h4 className="card__heading">{titel}</h4>
         <div className="card__selector">
             <ul className="list--reset card__list">
-              <li className="card__list-item card__list-item--active">тонкое</li>
-              <li className="card__list-item ">традиционное</li>
+              {
+                types.map((typeId) => <li onClick={() => setactiveIndexType(typeId)} className={activeIndexType===typeId ? "card__list-item card__list-item--active" : "card__list-item"}>{typeNames[typeId]} </li>)
+              }
             </ul>
             <ul className="list--reset card__list">
-              <li className="card__list-item card__list-item--active">26 см.</li>
-              <li className="card__list-item ">30 см.</li>
-              <li className="card__list-item ">40 см.</li>
+              {
+                sizes.map((size,i) => <li onClick={() => onClickCategories(i)} className={activeIndex===i ? "card__list-item card__list-item--active" : "card__list-item"}>{size} cм.</li>)
+              }
             </ul>
           </div>
         <div className="card__bottom">

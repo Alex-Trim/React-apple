@@ -8,8 +8,8 @@ function Sort() {
           <b>Сортировка по:</b>
           <span className="sort__item">популярности</span>
         </div>
-        <div className="hidden sort__popup">
-          <ul>
+        <div className="sort__popup">
+          <ul className="list--reset">
             <li className="active">популярности</li>
             <li>цене</li>
             <li>алфавиту</li>

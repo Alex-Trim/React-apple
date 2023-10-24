@@ -4,7 +4,7 @@ import Header from './components/Header';
 import Categories from './components/Categories';
 import Sort from './components/Sort';
 import AppelCard from './components/AppelCard';
-
+import appelItom from './assets/appel.json'
 function App() {
   return (
     <div className="wraper">
@@ -18,11 +18,11 @@ function App() {
                 </div>
                 <h2 className="heading heading--strong">Все товары</h2>
                 <div className="content">
-                  <AppelCard titel="Мексикансие яблочки" prise="466" img="https://s1.1zoom.me/big3/593/Apples_Closeup_Red_Three_490685.jpg"/>
-                  <AppelCard titel="Сибирские яблочки" prise="123" img="https://s1.1zoom.me/big3/593/Apples_Closeup_Red_Three_490685.jpg"/>
-                  <AppelCard titel="Зеленные яблочки" prise="234" img="https://puddostavka.ru/upload/iblock/550/gttjtceawks3ad8pgrsogp1lrv8v1j4o.jpg"/>
-                  <AppelCard titel="Южные яблочки" prise="564" img="https://s1.1zoom.me/big3/593/Apples_Closeup_Red_Three_490685.jpg"/>
-                 
+                {
+                  appelItom.map((obj) => (
+                    <AppelCard {...obj}/>
+                    ))
+                }
                 </div>
             </div>  
         </section>    

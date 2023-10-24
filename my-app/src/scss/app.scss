@@ -153,6 +153,9 @@ span {
 	color: #fff;
 	background-color: #282828;
 }
+.sort{
+	position: relative;
+}
 .sort__label {
 	display: flex;
 	flex-direction: row;
@@ -163,6 +166,22 @@ span {
 	color: #e02444;
 	border-bottom: 1px dashed #e02444;
 	cursor: pointer;
+}
+.sort__popup{
+	position: absolute;
+	z-index: 10;
+	right: -1.5em;
+    top: 2em;
+	ul {
+		width: min-content;
+		padding: 1em 0;
+		background: #fff;
+		border: 1px solid;
+		border-radius: 2em;
+		li{
+			padding: 1em 1.2em;
+		}
+	}
 }
 .content {
 	display: grid;

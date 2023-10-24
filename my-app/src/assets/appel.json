@@ -1,0 +1,82 @@
+[
+    {
+        "index": 0,
+        "titel": "Мексикансие яблочки",
+        "img": "https://s1.1zoom.me/big3/593/Apples_Closeup_Red_Three_490685.jpg",
+        "prise": 555,
+        "types":[0,1],
+        "sizes": [26, 30 ,40]
+    },
+    {
+        "index": 1,
+        "titel": "Мелба",
+        "img": "https://s1.1zoom.me/big3/593/Apples_Closeup_Red_Three_490685.jpg",
+        "prise": 555,
+        "types":[0,1],
+        "sizes": [ 30 ,40]
+    },
+    {
+        "index": 2,
+        "titel": "Антоновка",
+        "img": "https://s1.1zoom.me/big3/593/Apples_Closeup_Red_Three_490685.jpg",
+        "prise": 555,
+        "types":[0,1],
+        "sizes": [26, 40]
+    },
+    {
+        "index": 3,
+        "titel": "Голден Делишес",
+        "img": "https://s1.1zoom.me/big3/593/Apples_Closeup_Red_Three_490685.jpg",
+        "prise": 555,
+        "types":[0,1],
+        "sizes": [26, 30]
+    },
+    {
+        "index": 4,
+        "titel": "Слава переможцам",
+        "img": "https://s1.1zoom.me/big3/593/Apples_Closeup_Red_Three_490685.jpg",
+        "prise": 555,
+        "types":[0,1],
+        "sizes": [26, 30 ,40]
+    },
+    {
+        "index": 5,
+        "titel": "Фуджи",
+        "img": "https://s1.1zoom.me/big3/593/Apples_Closeup_Red_Three_490685.jpg",
+        "prise": 555,
+        "types":[0,1],
+        "sizes": [26, 30 ,40]
+    },
+    {
+        "index": 6,
+        "titel": "Ред Делишес",
+        "img": "https://s1.1zoom.me/big3/593/Apples_Closeup_Red_Three_490685.jpg",
+        "prise": 555,
+        "types":[0,1],
+        "sizes": [26, 30 ,40]
+    },
+    {
+        "index": 7,
+        "titel": "Папировка",
+        "img": "https://s1.1zoom.me/big3/593/Apples_Closeup_Red_Three_490685.jpg",
+        "prise": 555,
+        "types":[0,1],
+        "sizes": [26, 30 ,40]
+    },
+    {
+        "index": 8,
+        "titel": "Макинтош",
+        "img": "https://s1.1zoom.me/big3/593/Apples_Closeup_Red_Three_490685.jpg",
+        "prise": 555,
+        "types":[0,1],
+        "sizes": [26, 30 ,40]
+    },
+    {
+        "index": 9,
+        "titel": "Налив Белый",
+        "img": "https://s1.1zoom.me/big3/593/Apples_Closeup_Red_Three_490685.jpg",
+        "prise": 555,
+        "types":[0,1],
+        "sizes": [26, 30 ,40]
+    }
+]
