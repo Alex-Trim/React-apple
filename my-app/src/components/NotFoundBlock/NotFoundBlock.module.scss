@@ -1,0 +1,16 @@
+.root {
+    margin: 0;
+    padding: 3em;
+    text-align: center;
+
+    span {
+        font-size: 3em;
+    }
+}
+
+.description {
+    font-size: 1.2em;
+    * {
+        margin: 0;
+    }
+}

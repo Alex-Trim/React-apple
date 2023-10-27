@@ -1,21 +1,23 @@
 import logoIcon from "../assets/img/apple.png"
-
+import { Link } from "react-router-dom";
 function Header() {
     return (
         <header className="header">
           <div className="container header__container">
-              <div className="header__logo logo">
-                  <img className="logo__img" src={logoIcon} alt=""></img>
-                  <div className="logo__description">
-                      <h1>React Apple</h1>
-                      <p>Lorem ipsum dolor sit.</p>
-                  </div>
+              <div >
+                <Link className="header__logo logo" to='/'>
+                    <img className="logo__img" src={logoIcon} alt=""></img>
+                    <div className="logo__description">
+                        <h1>React Apple</h1>
+                        <p>Lorem ipsum dolor sit.</p>
+                    </div>
+                </Link>
               </div>
               <div className="header__nav">
                   <nav className="nav">
                       <ul className="list--reset nav__list">
                           <li className="nav__item">
-                              <a className="link link--btn link--btn-basket" href="">
+                              <Link className="link link--btn link--btn-basket" to='/basket'>
                                   <div className="link-btn--basket__cost">
                                       <span>453</span>
                                       <span>p</span>
@@ -30,8 +32,7 @@ function Header() {
                                           </svg>
                                       <span className="link-btn--basket__product--num">3</span>
                                   </div>
-                                
-                              </a>
+                              </Link>
                           </li>
                       </ul>
                   </nav>

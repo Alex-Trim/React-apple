@@ -12,7 +12,7 @@ function Categories() {
         <ul className="list--reset categories__list ">
             {
                 categories.map((value , i) => (
-                    <li onClick={() => onClickCategories(i)} className={activeIndex===i ? "categories__item categories__item--active" : "categories__item"}>
+                    <li key={i} onClick={() => onClickCategories(i)} className={activeIndex===i ? "categories__item categories__item--active" : "categories__item"}>
                         {value}
                     </li>
                 ))

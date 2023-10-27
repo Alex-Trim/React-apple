@@ -139,6 +139,7 @@ span {
 	background-color: #e7e7e7;
 	font-weight: 700;
 	border-radius: 2em;
+	cursor: pointer;
 	-webkit-border-radius: 2em;
 	-moz-border-radius: 2em;
 	-ms-border-radius: 2em;
@@ -180,6 +181,10 @@ span {
 		border-radius: 2em;
 		li{
 			padding: 1em 1.2em;
+			cursor: pointer;
+		}
+		.popup--active{
+			background-color: #88f89b5b;
 		}
 	}
 }

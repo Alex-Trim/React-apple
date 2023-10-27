@@ -25,12 +25,12 @@ function AppelCard({titel, prise, img, sizes, types}) {
         <div className="card__selector">
             <ul className="list--reset card__list">
               {
-                types.map((typeId) => <li onClick={() => setactiveIndexType(typeId)} className={activeIndexType===typeId ? "card__list-item card__list-item--active" : "card__list-item"}>{typeNames[typeId]} </li>)
+                types.map((typeId,i) => <li key={i} onClick={() => setactiveIndexType(typeId)} className={activeIndexType===typeId ? "card__list-item card__list-item--active" : "card__list-item"}>{typeNames[typeId]} </li>)
               }
             </ul>
             <ul className="list--reset card__list">
               {
-                sizes.map((size,i) => <li onClick={() => onClickCategories(i)} className={activeIndex===i ? "card__list-item card__list-item--active" : "card__list-item"}>{size} cм.</li>)
+                sizes.map((size,i) => <li key={i} onClick={() => onClickCategories(i)} className={activeIndex===i ? "card__list-item card__list-item--active" : "card__list-item"}>{size} cм.</li>)
               }
             </ul>
           </div>
