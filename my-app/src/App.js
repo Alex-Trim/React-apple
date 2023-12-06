@@ -10,14 +10,17 @@ import NotFound from "./pagers/NotFound";
 import { Routes, Route } from "react-router-dom";
 
 function App() {
+
+  const [searchValue, setSearchValue] = React.useState('');
+
   return (
     <div className="wraper">
-      <Header />
+      <Header searchValue={searchValue} setSearchValue={setSearchValue}/>
     <main>
         <section className="section">
           <div className="container">
             <Routes>
-              <Route path="/" element={<Home/>} />
+              <Route path="/" element={<Home searchValue={searchValue}/>} />
               <Route path="/basket" element={<Cart/>} />
               <Route path="*" element={<NotFound/>} />
             </Routes>

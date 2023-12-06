@@ -1,6 +1,7 @@
 import logoIcon from "../assets/img/apple.png"
 import { Link } from "react-router-dom";
-function Header() {
+import Search from "./Search";
+function Header({searchValue, setSearchValue}) {
     return (
         <header className="header">
           <div className="container header__container">
@@ -13,6 +14,7 @@ function Header() {
                     </div>
                 </Link>
               </div>
+              <Search searchValue={searchValue} setSearchValue={setSearchValue}/>
               <div className="header__nav">
                   <nav className="nav">
                       <ul className="list--reset nav__list">

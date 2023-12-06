@@ -4,23 +4,29 @@ import Categories from '../components/Categories';
 import Sort from '../components/Sort';
 import AppelCard from '../components/AppelCard';
 import Skeleton from '../components/AppelCard/Skeleton';
+import Pagination from '../components/Pagination';
 
-export const Home = () => {
+export const Home = ({searchValue}) => {
     const [items, setItems] = React.useState([]);
     const [isLoading, setIsLoading] = React.useState(true);
     const [categoryId, setCategoryId] = React.useState(0);
+    const [currentPage, setCrrentPage] = React.useState(1);
     const [sortType, setSortType] = React.useState(0);
     const list = ['index','prise','titel']
 
     React.useEffect(() => {
       setIsLoading(true);
-      fetch('https://6538dfb9a543859d1bb21a80.mockapi.io/Items?category='+ categoryId+'&sortBy='+ list[sortType]+'&order=abc').then((res) => {
+
+      const categoriFilter = categoryId==0 ?'category!='+ categoryId : 'category='+ categoryId;
+      const search = searchValue ?'&search='+ searchValue : '';
+
+      fetch('https://6538dfb9a543859d1bb21a80.mockapi.io/Items?page='+currentPage+'&limit=8&'+ categoriFilter + search +'&sortBy='+ list[sortType] +'&order=abc').then((res) => {
         return res.json();
       }).then(arr => {
         setItems(arr);
         setIsLoading(false);
       });
-    }, [categoryId, sortType]);
+    }, [categoryId, sortType, searchValue, currentPage]);
 
   return (
     <>
@@ -37,6 +43,7 @@ export const Home = () => {
         ))
       }
       </div>
+      <Pagination onChangePage={(number) => setCrrentPage(number)}/>
     </>
   )
 }
